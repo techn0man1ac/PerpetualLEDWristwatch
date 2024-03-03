@@ -1,4 +1,10 @@
 /*
+  Tech01 12 LED ATtiny "Perpetual" Wristwatch By Serhii Trush for MIT License
+  https://github.com/techn0man1ac/PerpetualLEDWristwatch
+
+  The simple and "Perpetual" WristWatch(PWW) with 12 res LEDs, it have LIR2430 Li-Ion battery and 12 solar cells,
+  based on a simple Microchip microcontroller ATtimy13. It full open source(firmware and hardware).
+
   By Tech01 labs 2024.
 
   Fuses to defalt:
@@ -42,7 +48,7 @@ int main() {
   ADCSRA &= ~(1 << ADEN);  //Disable ADC
   ACSR = (1 << ACD);       //Disable the analog comparator
   // Set up Port B as Input
-  // DDRB = 0b01111;  // Use 470 ohm resistor per LED
+  DDRB = 0b01111;  // Use 470 ohm resistor per LED
   wdt_reset();
   wdt_enable(WDTO_500MS);  // Set watchdog timer to trigger every 500 ms
   WDTCR |= (1 << WDTIE);   // Set watchdog timer in interrupt mode
@@ -106,7 +112,7 @@ uint8_t Time(uint8_t currState) {
   return currState;
 }
 
-void ledOn(byte led) {
+void ledOn(byte led) {  // Charlieplexing
   switch (led) {
 
     case 1:
