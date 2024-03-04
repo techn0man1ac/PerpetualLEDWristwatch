@@ -48,7 +48,7 @@ int main() {
   ADCSRA &= ~(1 << ADEN);  //Disable ADC
   ACSR = (1 << ACD);       //Disable the analog comparator
   // Set up Port B as Input
-  DDRB = 0b01111;  // Use 470 ohm resistor per LED
+  DDRB = 0b00000;  // Use 470 ohm resistor per LED
   wdt_reset();
   wdt_enable(WDTO_500MS);  // Set watchdog timer to trigger every 500 ms
   WDTCR |= (1 << WDTIE);   // Set watchdog timer in interrupt mode
