@@ -8,7 +8,7 @@ The simple and "Perpetual" WristWatch(PWW) with 12 red LEDs, it have LIR2430 Li-
 
 # Video demonstration:
 
-https://www.youtube.com/shorts/_Q3GRxYN068
+https://youtu.be/T3b3lKKN2u0
 
 # How it's work?
 
