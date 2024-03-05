@@ -66,7 +66,7 @@ How to flash ATtiny13 with Arduino:
 
 https://www.hackster.io/taunoerik/programming-attiny13-with-arduino-uno-07beba
 
-![FLASH](https://raw.githubusercontent.com/techn0man1ac/ATtiny13BinaryWatches/main/Imgs/FLASH.png)
+![FLASH](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/FLASH.png)
 
 ATtiny13 core selections:
 
