@@ -40,7 +40,7 @@ https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/PCB
 
 Fresh board project here:
 
-/* none */
+https://oshwlab.com/raznie.podelki/attiny85binarywatches_copy
 
 # Schematic:
 
