@@ -16,11 +16,11 @@ Every 0.5 sec CPU wake up(cycle iteration time 100 nS) and increase milliseconds
 
 # 3D model PCB:
 
-PCB Up side:
+PCB face side:
 
 ![PCB_Up_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/PCB_face_3D_render.png)
 
-PCB Down side:
+PCB back side:
 
 ![PCB_Down_side_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/PCB_back_3D_render.png)
 
@@ -50,7 +50,7 @@ https://en.wikipedia.org/wiki/Charlieplexing
 
 ![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-03.png)
 
-In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name 1N4148(becouse it have little reverse current):
+In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(becouse it have little reverse current):
 
 ![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/1N4148_parameters.png)
 
@@ -60,7 +60,7 @@ The diode add 0.7 volts drop(4.7-0.7=4.0V) and battery don't overcharge up to 4 
 
 ![AVR ISP programmer pinout](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/ProgramingPins.png)
 
-Here is pinout for AVR ISP programmer - unsolder battery and power up 3V pins to programmer 5V, MI->MISO programer(Digital Pin 11), MO->MOSI(Digital Pin 12), CK->SCK(Digital Pin 13) RS->Reset(Digital Pin 10) and GD-> programmer GND. 
+Here is pinout for AVR ISP programmer - unsolder battery and power up 3V pins to programmer 5V, MI->MISO programer(Arduino digital Pin 11), MO->MOSI(digital Pin 12), CK->SCK(digital Pin 13) RS->Reset(digital Pin 10) and GD-> programmer GND. 
 
 How to flash ATtiny13 with Arduino:
 
