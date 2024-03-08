@@ -50,7 +50,7 @@ https://en.wikipedia.org/wiki/Charlieplexing
 
 ![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-03.png)
 
-In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(becouse it have little reverse current):
+In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(because it have little reverse current):
 
 ![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/1N4148_parameters.png)
 
