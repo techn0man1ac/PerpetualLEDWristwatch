@@ -94,7 +94,7 @@ This project full open source(PCB and code).
 
 Mission:
 
-"To develop a straightforward and eco-friendly watch that integrates innovative technologies with minimal components, ensuring energy efficiency is within reach for all.".
+"To develop a simply and eco-friendly watch that integrates innovative technologies with minimal components, ensuring energy efficiency is within reach for all.".
 
 Vision:
 
