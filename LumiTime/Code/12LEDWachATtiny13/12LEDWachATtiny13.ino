@@ -1,8 +1,8 @@
 /*
-  Tech01 12 LED ATtiny "Perpetual" Wristwatch By Serhii Trush for MIT License
+  Tech01 12 LED ATtiny "Perpetual" Wristwatch By Serhii Trush for MIT License.
   https://github.com/techn0man1ac/PerpetualLEDWristwatch
 
-  The simple and "Perpetual" WristWatch(PWW) with 12 res LEDs, it have LIR2430 Li-Ion battery and 12 solar cells,
+  The simple and "Perpetual" WristWatch(project code name "LumiTime") with 12 red LEDs, it have LIR2430 Li-Ion battery and 12 solar cells,
   based on a simple Microchip microcontroller ATtimy13. It full open source(firmware and hardware).
 
   By Tech01 labs 2024.
