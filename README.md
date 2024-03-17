@@ -1,3 +1,6 @@
+[![UA_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/UA%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch/blob/main/README_UA.md)
+[![GB_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/GB%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch)
+
 # 12 LED ATtiny "Perpetual" Wristwatch
 
 ![Device_face](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Face.jpg)
@@ -88,7 +91,9 @@ Source code(for Arduino IDE - "12LEDWachATtiny13.ino") here:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/Code/12LEDWachATtiny13
 
-This project full open source(PCB and code).
+This project full open source(PCB and code), so anyone can modernize it. But we must give credit to the previous project, without which there would be no "ATtiny13BinaryWatches":
+
+https://github.com/techn0man1ac/ATtiny13BinaryWatches
 
 # Our mission and vision
 
