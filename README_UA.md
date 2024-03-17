@@ -1,3 +1,5 @@
+[![UA_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/UA%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch/blob/main/README_UA.md)
+[![GB_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/GB%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch)
 
 # "Вічний" наручний годиник на 12-ти світлодіодах
 
