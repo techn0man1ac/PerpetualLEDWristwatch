@@ -1,13 +1,13 @@
-[![UA_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/UA%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch/blob/main/README_UA.md)
-[![GB_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Flags/GB%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch)
+[![UA_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Flags/UA%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch/blob/main/README_UA.md)
+[![GB_version_README](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Flags/GB%402x.png)](https://github.com/techn0man1ac/PerpetualLEDWristwatch)
 
 # 12 LED ATtiny "Perpetual" Wristwatch
 
-![Device_face](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Face.jpg)
+![Device_face](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Face.jpg)
 
-The simple and "Perpetual" WristWatch(PWW) with 12 red LEDs, it have LIR2430 Li-Ion battery and 12 solar cells, based on a simple Microchip microcontroller ATtimy13. It full open source(firmware and hardware).
+The simple and "Perpetual" WristWatch(project code name "LumiTime") with 12 red LEDs, it have LIR2430 Li-Ion battery and 12 solar cells, based on a simple Microchip microcontroller ATtimy13. It full open source(firmware and hardware).
 
-![PCB_back](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/Back.jpg)
+![PCB_back](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Back.jpg)
 
 # Video demonstration:
 
@@ -21,15 +21,15 @@ Every 0.5 sec CPU wake up(cycle iteration time 100 nS) and increase milliseconds
 
 PCB face side:
 
-![PCB_Up_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/PCB_face_3D_render.png)
+![PCB_Up_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/PCB_face_3D_render.png)
 
 PCB back side:
 
-![PCB_Down_side_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/PCB_back_3D_render.png)
+![PCB_Down_side_3D_Render](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/PCB_back_3D_render.png)
 
 PCB have size 35 mm in the diameter:
 
-![PCB_size](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/PCB_size.png)
+![PCB_size](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/PCB_size.png)
 
 The thickness of the board is recommended to take 0.8mm otherwise it may not fit into the case.
 
@@ -37,7 +37,7 @@ The thickness of the board is recommended to take 0.8mm otherwise it may not fit
 
 Files for fabrication:
 
-https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/PCB
+https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/PCB
 
 # PCB home page:
 
@@ -51,17 +51,17 @@ It's have simple schematic, for save pins I used Charlieplexing(35 components in
 
 https://en.wikipedia.org/wiki/Charlieplexing
 
-![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-03.png)
+![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-17.png)
 
 In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(because it have little reverse current):
 
-![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/1N4148_parameters.png)
+![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/1N4148_parameters.png)
 
 The diode add 0.7 volts drop(4.7-0.7=4.0V) and battery don't overcharge up to 4 V.
 
 # How to flash ATtiny
 
-![AVR ISP programmer pinout](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/ProgramingPins.png)
+![AVR ISP programmer pinout](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/ProgramingPins.png)
 
 Here is pinout for AVR ISP programmer - unsolder battery and power up 3V pins to programmer 5V, MI->MISO programer(Arduino digital Pin 11), MO->MOSI(digital Pin 12), CK->SCK(digital Pin 13) RS->Reset(digital Pin 10) and GD-> programmer GND. 
 
@@ -69,7 +69,7 @@ How to flash ATtiny13 with Arduino:
 
 https://www.hackster.io/taunoerik/programming-attiny13-with-arduino-uno-07beba
 
-![FLASH](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/FLASH.png)
+![FLASH](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/FLASH.png)
 
 ATtiny13 core selections:
 
@@ -85,11 +85,11 @@ ATtiny13 core selections:
 
 - Programmer: Arduino as ISP
 
-![Arduino IDE](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/Imgs/ArduinoIDE.png)
+![Arduino IDE](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/ArduinoIDE.png)
 
 Source code(for Arduino IDE - "12LEDWachATtiny13.ino") here:
 
-https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/Code/12LEDWachATtiny13
+https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Code/12LEDWachATtiny13
 
 This project full open source(PCB and code), so anyone can modernize it. But we must give credit to the previous project, without which there would be no "ATtiny13BinaryWatches":
 
