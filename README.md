@@ -95,6 +95,22 @@ This project full open source(PCB and code), so anyone can modernize it. But we 
 
 https://github.com/techn0man1ac/ATtiny13BinaryWatches
 
+# Power consumption
+
+In standby mode (when the button is not pressed), the wristwatch consumes approximately 5 μA, the battery have capacity - 50 mAh, in time show mode watch consumes 2.5 mA, if you look at the time every day 3 times(0.25 per hour), the operating time is 1.5 seconds, using these data we can calculate battery life time. For example - calculator from Oregon Embedded:
+
+https://oregonembedded.com/batterycalc.htm
+
+We have ~year of work, of course, as the voltage drops, the consumption of the watch will also drop (for example - 2.7 V, the consumption is ~3 μA), therefore, the resulting lower value is the guaranteed uptime:
+
+![BatteryLifeCalculator](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/BatteryLifeCalculator.png)
+
+However, if you give the device 5-10 minutes a day of street light (for example, take it out of your sleeve), and the working time will immediately increase several times. Here in the video I show how the watch charges even in cloudy weather:
+
+https://youtu.be/5vcrXjH7wVM
+
+It is worth noting that LED bulbs, which are now very popular for indoor lighting, do not provide a sufficient level of light in the spectrum at which solar panels work, so charging is possible only very close LED lamp.
+
 # Our mission and vision
 
 Mission:
