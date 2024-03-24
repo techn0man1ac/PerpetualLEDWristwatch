@@ -53,7 +53,7 @@ https://en.wikipedia.org/wiki/Charlieplexing
 
 ![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-17.png)
 
-In this project i use for charging 12 light sensor BPW34S, on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(because it have little reverse current):
+In this project i use for charging 12 light sensor BPW34S(PV array), on clear sun one cell make 0.5-0.6 V and ~2 mA, connect its in serial and make simply charging schematic - use 2 components, ZD1 to drop voltage 6 -> 4.7 V and make protection to leakage of current in solar panels in to diode D1 name LL4148(because it have little reverse current):
 
 ![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/1N4148_parameters.png)
 
@@ -90,6 +90,8 @@ ATtiny13 core selections:
 Source code(for Arduino IDE - "12LEDWachATtiny13.ino") here:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Code/12LEDWachATtiny13
+
+The time, which start the clock, set only in the code, these are the 26 and 27 code tapes.
 
 This project full open source(PCB and code), so anyone can modernize it. But we must give credit to the previous project, without which there would be no "ATtiny13BinaryWatches":
 
