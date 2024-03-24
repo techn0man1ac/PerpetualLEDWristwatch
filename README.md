@@ -99,7 +99,7 @@ https://github.com/techn0man1ac/ATtiny13BinaryWatches
 
 # Power consumption
 
-In standby mode (when the button is not pressed), the wristwatch consumes approximately 5 μA, the battery have capacity - 50 mAh, in time show mode watch consumes 2.5 mA, if you look at the time every day 3 times(0.25 per hour), the operating time is 1.5 seconds, using these data we can calculate battery life time. For example - calculator from Oregon Embedded:
+In standby mode (when the button is not pressed), the wristwatch consumes approximately 5 μA, the battery have capacity - 50 mAh, in time show mode watch consumes 2.5 mA, if you look at the time every day 6 times(0.25 per hour), the operating time is 1.5 seconds, using these data we can calculate battery life time. For example - calculator from Oregon Embedded:
 
 https://oregonembedded.com/batterycalc.htm
 
