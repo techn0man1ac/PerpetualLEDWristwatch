@@ -53,7 +53,7 @@ https://en.wikipedia.org/wiki/Charlieplexing
 
 ![Schematic_Wristwatch](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/PCB/Schematic/Schematic_12LEDWachATtiny13_2024-03-17.png)
 
-В цьому проєкті, для заряджання, я використав 12 фотодіодів BPW34S, у сонячну погоду один елемент генерує 0.5-0.6 В і ~2 мА, з'єднав їх послідовно та зробив просту зарядну схему використовуючи 2 компоненти - стабілітрон ZD1 знижує напругу з 6 до 4.7 В та наявний захист від "витоку" струму в сонячні панелі з допомогою діоду D1 LL4148(саме цей має низький зворотній струм):
+В цьому проєкті, для заряджання, я використав 12 фотодіодів BPW34S(PV array), у сонячну погоду один елемент генерує 0.5-0.6 В і ~2 мА, з'єднав їх послідовно та зробив просту зарядну схему використовуючи 2 компоненти - стабілітрон ZD1 знижує напругу з 6 до 4.7 В та наявний захист від "витоку" струму в сонячні панелі з допомогою діоду D1 LL4148(саме цей має низький зворотній струм):
 
 ![1N4148_parameters](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/1N4148_parameters.png)
 
@@ -90,6 +90,8 @@ https://www-hackster-io.translate.goog/taunoerik/programming-attiny13-with-ardui
 Вихідний код(для Arduino IDE - "12LEDWachATtiny13.ino") ось тут:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Code/12LEDWachATtiny13
+
+Час з якого стартує годинник поки що задається лише в коді, це 26 та 27 стрічки.
 
 Цей проєкт є повністю відкритим, як плата так і прошивка для мікроконтролера, тому його модернізувати може кожен. Але треба віддати належне попередньому проєкту, без якого цього б не існувало "Бінарний наручний годиник":
 
