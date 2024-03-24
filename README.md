@@ -91,7 +91,7 @@ Source code(for Arduino IDE - "12LEDWachATtiny13.ino") here:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Code/12LEDWachATtiny13
 
-The time, which start the clock, set only in the code, these are the 26 and 27 code tapes.
+The time, which start the clock, set only in the code, these are the 26 and 27 code lines.
 
 This project full open source(PCB and code), so anyone can modernize it. But we must give credit to the previous project, without which there would be no "ATtiny13BinaryWatches":
 
