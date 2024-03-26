@@ -5,7 +5,7 @@
 
 ![Device_face](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Face.jpg)
 
-Простий та "вічний" наручний годиник з 12-ма світлодіодами(кодове ім'я проєкту "LumiTime"), має LIR2430 Li-Ion батарею та 12 мікро сонячних панелей, оснований на простому мікроконтролері від Microchip ATtimy13. Цей проєкт повністю open source(залізо та прошивка).
+Простий та "вічний" наручний годиник з 12-ма світлодіодами(кодове ім'я проєкту "LumiTime"), має LIR2430 Li-Ion батарею та 12 мікро сонячних панелей, оснований на простому мікроконтролері від Microchip ATtiny13. Цей проєкт повністю open source(залізо та прошивка).
 
 ![PCB_back](https://raw.githubusercontent.com/techn0man1ac/PerpetualLEDWristwatch/main/LumiTime/Imgs/Back.jpg)
 
