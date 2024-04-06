@@ -45,7 +45,7 @@ https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/PCB
 
 https://oshwlab.com/raznie.podelki/attiny85binarywatches_copy
 
-Замовити прототип для тестування можна ось тут:
+Замовити прототип для тестування можна ось тут(закінчений пристрій але без прошивки):
 
 https://www.pcbway.com/project/shareproject/_Perpetual_Wristwatch_d14e5fc4.html
 
