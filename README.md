@@ -39,15 +39,15 @@ Files for fabrication:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/PCB
 
-You can order a prototype for testing here:
-
-https://www.pcbway.com/project/shareproject/_Perpetual_Wristwatch_d14e5fc4.html
-
 # PCB home page:
 
 Fresh board project here:
 
 https://oshwlab.com/raznie.podelki/attiny85binarywatches_copy
+
+You can order a prototype for testing here(completely ready device without firmware):
+
+https://www.pcbway.com/project/shareproject/_Perpetual_Wristwatch_d14e5fc4.html
 
 # Schematic:
 
