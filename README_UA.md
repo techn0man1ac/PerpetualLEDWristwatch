@@ -45,6 +45,10 @@ https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/PCB
 
 https://oshwlab.com/raznie.podelki/attiny85binarywatches_copy
 
+Замовити прототип для тестування можна ось тут:
+
+https://www.pcbway.com/project/shareproject/_Perpetual_Wristwatch_d14e5fc4.html
+
 # Схемотехніка:
 
 Пристрій має просту схемотехніку, для економії виходів мікроконтролера я використав Мультиплексування методом Чарлі(сумарно 35 компонентів):
