@@ -20,15 +20,16 @@
 #include <avr/power.h>
 #include <avr/interrupt.h>
 
-#define msPerCycleReal 559    // it's mean 500 ms in real life
+#define msPerCycleReal 561    // it's mean 500 ms in real life
 #define MsIn12Hours 43200000  // 43200000 ms -> 43200 sec = 12h
 
-uint8_t Hours = 9;    // <- Set time in hours here(0..11)
-uint8_t Minutes = 45;  // <- Set time in minutes here(5..55)
+uint8_t Hours = 11;    // <- Set time in hours here(0..11)
+uint8_t Minutes = 25;  // <- Set time in minutes here(5..55)
 
 volatile uint32_t MSec = Hours * 3600000 + Minutes * 60000;  // 33300000 is 09:15
 
 uint8_t Mode = 0;
+uint8_t ResetCount = 0;
 
 ISR(WDT_vect) {            // If button not press code add "tick". Iteration time is 100 nS
   MSec += msPerCycleReal;  // 500 ms per cycle
@@ -39,6 +40,15 @@ ISR(WDT_vect) {            // If button not press code add "tick". Iteration tim
 
   if (PINB & (1 << PINB4) || Mode > 0) {  // if (digitalRead(4) == HIGH) or we in show time mode
     Mode = Time(Mode);                    // Show time on LED in binary format
+    
+    ResetCount++;
+
+    if (ResetCount > 40) { // Same like 10 second button press
+      soft_reset();
+    }
+
+  } else {
+    ResetCount = 0;
   }
 
   WDTCR |= (1 << WDTIE);
@@ -183,5 +193,11 @@ void ledOn(byte led) {  // Charlieplexing
     case 13:
       DDRB = 0b0000;
       PORTB = 0b0000;
+  }
+}
+
+void soft_reset() {
+  wdt_enable(WDTO_15MS);
+  while (true) {
   }
 }
