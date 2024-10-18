@@ -17,6 +17,10 @@ https://youtu.be/T3b3lKKN2u0
 
 Every 0.5 sec CPU wake up(cycle iteration time 100 nS) and increase milliseconds value and go to the sleep mode(3-5 uA). Wristwatch have one button "NOW" and 12 LED, if you push the button - show times on LEDs in the next algorithm - first, show hours(1, 2, 3, 4, 5, 6 etc....) and second is show minutes with 5 min. accuracy(5, 10, 15, 20, 25, 30 etc....), show 0.5 sec to the hours and 0.5 for minutes -> sleep mode again.
 
+# How to set the time?
+
+If you press the button and hold it, after 10 seconds the watch will start shifting the time by 5 minutes each display cycle, and this will continue until you release the button.
+
 # 3D model PCB:
 
 PCB face side:
