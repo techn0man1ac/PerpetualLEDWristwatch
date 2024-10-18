@@ -26,7 +26,7 @@
 uint8_t Hours = 9;    // <- Set time in hours here(0..11)
 uint8_t Minutes = 15;  // <- Set time in minutes here(5..55)
 
-volatile uint32_t MSec = MSec = Hours * 3600000 + Minutes * 60000;  // 33300000 is 09:15
+volatile uint32_t MSec = Hours * 3600000 + Minutes * 60000;  // 33300000 is 09:15
 
 uint8_t Mode = 0;
 uint8_t UpTimeCount = 0;
