@@ -19,6 +19,8 @@ Every 0.5 sec CPU wake up(cycle iteration time 100 nS) and increase milliseconds
 
 # How to set the time?
 
+https://www.youtube.com/shorts/7TG0KjUsHnk
+
 If you press the button and hold it, after 10 seconds the watch will start shifting the time by 5 minutes each display cycle, and this will continue until you release the button.
 
 # 3D model PCB:
