@@ -26,7 +26,7 @@
 uint8_t Hours = 9;    // <- Set time in hours here(0..11)
 uint8_t Minutes = 15;  // <- Set time in minutes here(5..55)
 
-volatile uint32_t MSec = Hours * 3600000 + Minutes * 60000;  // 33300000 is 09:15
+volatile uint32_t MSec = 0;  // 33300000 is 09:15
 
 uint8_t Mode = 0;
 uint8_t UpTimeCount = 0;
@@ -40,10 +40,11 @@ ISR(WDT_vect) {            // If button not press code add "tick". Iteration tim
 
   if (PINB & (1 << PINB4) || Mode > 0) {  // if (digitalRead(4) == HIGH) or we in show time mode
     Mode = Time(Mode);                    // Show time on LED in binary format
-
+    
     UpTimeCount++;
 
     if (UpTimeCount > 40 && Mode == 2) { // Same like 10 second button press
+      TimeToMs();
       Up5Minutes();
     }
 
@@ -55,6 +56,8 @@ ISR(WDT_vect) {            // If button not press code add "tick". Iteration tim
 }
 
 int main() {
+  TimeToMs();
+  
   ADCSRA &= ~(1 << ADEN);  //Disable ADC
   ACSR = (1 << ACD);       //Disable the analog comparator
   // Set up Port B as Input
@@ -65,7 +68,7 @@ int main() {
   sei();                   // Enable global interrupts
 
   set_sleep_mode(SLEEP_MODE_PWR_DOWN);
-  
+
   while (1) {
     sleep_enable();
     sleep_cpu();
@@ -102,10 +105,10 @@ uint8_t Time(uint8_t currState) {
       if (!MSec) {  // protect divide by zero, thanks ChatGPT
         Minutes = 0;
       } else {
-        Minutes = ((MSec / 60000) % 60) / 5;  // 60 Seconds per minutes(5 min to discrete)
+        Minutes = ((MSec / 60000) % 60);  // 60 Seconds per minutes(5 min to discrete)
       }
 
-      LEDValue = Minutes;
+      LEDValue = Minutes / 5;
 
       currState = 3;
       break;
@@ -198,5 +201,11 @@ void ledOn(byte led) {  // Charlieplexing
 }
 
 void Up5Minutes() {
+  Minutes = (Minutes / 5) * 5; // 47 -> 45
+  TimeToMs();
   MSec += 300000;
+}
+
+void TimeToMs() {
+  MSec = Hours * 3600000 + Minutes * 60000;
 }
