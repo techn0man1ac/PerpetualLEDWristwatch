@@ -5,13 +5,13 @@
   The simple and "Perpetual" WristWatch(project code name "LumiTime") with 12 red LEDs, it has LIR2430 Li-Ion battery and 12 solar cells,
   based on a simple Microchip microcontroller ATtiny13. It is fully open source (firmware and hardware).
 
-  Sketch uses 988 bytes (96%) of program storage space. Maximum is 1024 bytes.
-  Global variables use 13 bytes (20%) of dynamic memory, leaving 53 bytes for local variables. Maximum is 64 bytes.
+  Sketch uses 1008 bytes (98%) of program storage space. Maximum is 1024 bytes.
+  Global variables use 13 bytes (20%) of dynamic memory, leaving 51 bytes for local variables. Maximum is 64 bytes.
 
   By Tech01 labs 2024.
 */
 
-#define F_CPU 1200000UL  // CPU frequency set to 1.2 MHz
+#define F_CPU 1200000UL  // CPU frequency set to 1.2 MHz mode(low_fuses=0x6A high_fuses=0xFF - defalt fuses)
 #include <avr/io.h>      // AVR I/O library for ATtiny13
 #include <avr/wdt.h>     // Watchdog Timer library
 #include <avr/sleep.h>   // Sleep mode library
@@ -22,6 +22,7 @@
 #define msPerCycleReal 560    // Real cycle duration in milliseconds (approximately 500ms)
 #define MsIn12Hours 43200000  // Total milliseconds in 12 hours
 #define ButtonPin PINB4       // PB4 is the button pin
+#define TimeSetDalay 40       // TimeSetDalay / 4 = how many seconds need press the button to time set mode
 
 // Global variables to store time and mode states
 uint8_t Hours = 9;            // Default hour setting (0..11)
@@ -69,7 +70,8 @@ int main() {
         Mode = ShowTime(Mode);        // Display current time on LEDs
         ButtonPressCount += 1;
 
-        if (ButtonPressCount >= 40 && Mode == 1) { // Increment time by 5 minutes after long press
+        if (ButtonPressCount > TimeSetDalay && Mode == 0) { // Increment time by 5 minutes after long press
+          ButtonPressCount = TimeSetDalay; // Overflow protect
           Up5Minutes();
         }
       } else {
@@ -86,7 +88,7 @@ int main() {
 void initHardware() {
   ADCSRA &= ~(1 << ADEN);   // Disable Analog-to-Digital Converter (ADC)
   ACSR = (1 << ACD);        // Disable analog comparator
-  DDRB = 0b00000;           // Set Port B as input with pull-up resistors for LEDs
+  DDRB = 0b00000;           // Set Port B as input
   wdt_reset();              // Reset watchdog timer
   wdt_enable(WDTO_500MS);   // Enable watchdog timer to trigger every 500ms
   WDTCR |= (1 << WDTIE);    // Enable watchdog interrupt
@@ -119,6 +121,11 @@ uint8_t ShowTime(uint8_t currState) {
       break;
 
     case 1:
+      if (ButtonPressCount > TimeSetDalay) { // Time setup mode
+        MinutesRemainder = 0;
+        MinutesOnLED += 1; // We have step +5 minutes
+      }
+
       LEDValue = MinutesOnLED;  // Display discretized minutes
 
       if (MinutesRemainder > 1) {
@@ -165,11 +172,9 @@ void DisplayOnLED(uint8_t led) {  // Charlieplexing logic for LED display
 }
 
 void Up5Minutes() {
-  Minutes = FiveMinutesDiscrete;   // Reset minutes to the nearest five
-  TimeToMs();                      // Recalculate milliseconds from hours and minutes
-  MilliSeconds += 300000;                  // Add 5 minutes in milliseconds
-  FiveMinutesDiscrete += 5;        // Add 5 minutes to show LEDs
-  MinutesRemainder = 0;
+  Minutes = FiveMinutesDiscrete;
+  TimeToMs();
+  MilliSeconds += 300000;
 }
 
 void TimeToMs() {
