@@ -15,7 +15,9 @@ https://youtu.be/T3b3lKKN2u0
 
 # How it's work?
 
-Every 0.5 sec CPU wake up(cycle iteration time 100 nS) and increase milliseconds value and go to the sleep mode(3-5 uA). Wristwatch have one button "NOW" and 12 LED, if you push the button - show times on LEDs in the next algorithm - first, show hours(1, 2, 3, 4, 5, 6 etc....) and second is show minutes with 5 min. accuracy(5, 10, 15, 20, 25, 30 etc....), show 0.5 sec to the hours and 0.5 for minutes -> sleep mode again.
+Every 0.5 seconds, the processor wakes up (cycle iteration time is 100 microseconds), increments the millisecond variable, and quickly goes to sleep, the whole process consumes 3 to 5 µA. 
+The wristwatch has a "NOW" button and 12 LEDs, if you press the button, the time is displayed on the LEDs according to the following algorithm - first the hours are displayed (1, 2, 3, 4, 5, 6, etc. ) and then the minutes are shown in step 5 minute(5, 10, 15, 20, 25, 30, and so on...), but the LED blinks as many times as you need to add to this number to get the time. 
+For example, it is now 48 minutes, the LED 45 will light up and blink 3 times, that is, 45+3=48. Then CPU go back to sleep.
 
 # How to set the time?
 
@@ -101,7 +103,7 @@ Source code(for Arduino IDE - "12LEDWachATtiny13.ino") here:
 
 https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Code/12LEDWachATtiny13
 
-The time, which start the clock, set only in the code, these are the 26 and 27 code lines.
+The default time, which start the clock, set in the code, these are the 27 and 28 code lines.
 
 This project full open source(PCB and code), so anyone can modernize it. But we must give credit to the previous project, without which there would be no "ATtiny13BinaryWatches":
 
