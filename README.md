@@ -15,7 +15,10 @@ https://youtu.be/T3b3lKKN2u0
 
 # How it's work?
 
-Every 0.5 seconds, the processor wakes up (cycle iteration time is 100 microseconds), increments the millisecond variable, and quickly goes to sleep, the whole process consumes 3 to 5 µA. 
+Every 0.5 seconds, the processor wakes up (cycle iteration time is 100 microseconds), increments the millisecond variable, and quickly goes to sleep, the whole process consumes 3 to 5 µA:
+
+https://youtu.be/rdMVb2fhGco
+
 The wristwatch has a "NOW" button and 12 LEDs, if you press the button, the time is displayed on the LEDs according to the following algorithm - first the hours are displayed (1, 2, 3, 4, 5, 6, etc. ) and then the minutes are shown in step 5 minute(5, 10, 15, 20, 25, 30, and so on...), but the LED blinks as many times as you need to add to this number to get the time. 
 For example, it is now 48 minutes, the LED 45 will light up and blink 3 times, that is, 45+3=48. Then CPU go back to sleep.
 
