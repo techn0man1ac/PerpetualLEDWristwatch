@@ -128,6 +128,14 @@ https://youtu.be/5vcrXjH7wVM
 
 It is worth noting that LED bulbs, which are now very popular for indoor lighting, do not provide a sufficient level of light in the spectrum at which solar panels work, so charging is possible only very close LED lamp.
 
+# Case
+
+You can find the case files here:
+
+https://github.com/techn0man1ac/PerpetualLEDWristwatch/tree/main/LumiTime/Case
+
+Please note that the project is still under development and is subject to change.
+
 # Our mission and vision
 
 Mission:
